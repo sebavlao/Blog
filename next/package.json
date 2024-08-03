@@ -11,6 +11,7 @@
   "dependencies": {
     "@nextui-org/button": "^2.0.37",
     "@nextui-org/card": "^2.0.33",
+    "@nextui-org/chip": "^2.0.32",
     "@nextui-org/image": "^2.0.31",
     "@nextui-org/input": "^2.2.4",
     "@nextui-org/navbar": "^2.0.36",
@@ -19,6 +20,7 @@
     "@nextui-org/theme": "^2.2.9",
     "@nextui-org/user": "^2.0.33",
     "framer-motion": "^11.3.19",
+    "hex-rgb": "^5.0.0",
     "mariadb": "^3.3.1",
     "next": "14.2.5",
     "qs": "^6.13.0",
