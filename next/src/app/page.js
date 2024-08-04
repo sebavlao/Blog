@@ -2,6 +2,7 @@ import { Header } from "./components/header.js";
 import { Image } from "@nextui-org/image";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Chip } from "@nextui-org/chip";
+import { Avatar } from "@nextui-org/avatar";
 import qs from "qs";
 
 export default async function Home() {
@@ -22,12 +23,12 @@ export default async function Home() {
   const fetchPosts = await fetch(`http://localhost:1337/api/posts?${qs.stringify(qsObj)}`)
   const posts = await fetchPosts.json()
 
-  const image = posts.data[0].attributes.image.data.attributes
-  const categories = posts.data[0].attributes.categories.data[0].attributes
-  const iconCategories = posts.data[0].attributes.categories.data[0].attributes.icon.data.attributes
-
-  console.log(categories.color)
-  
+  const postAttributes = posts.data[0].attributes
+  const author = postAttributes.author.data.attributes
+  const authorImage = author.avatar.data.attributes
+  const image = postAttributes.image.data.attributes
+  const categories = postAttributes.categories.data[0].attributes
+  const iconCategories = postAttributes.categories.data[0].attributes.icon.data.attributes
 
   return (
     <>
@@ -41,16 +42,24 @@ export default async function Home() {
               height={500}
             />
           </article>
-          <article className="max-w-[500px]">
+          <article className="max-w-[500px] flex flex-col">
             <Card>
               <CardHeader>
                 <Chip startContent={<Image src={`http://localhost:1337${iconCategories.url}`}/>} classNames={{
-                  base: `bg-[${categories.color}] bg-opacity-20`,
-                  content: `font-bold text-[${categories.color}]`
+                  base: "bg-opacity-20",
+                  content: "font-bold"
                 }}>
                     {categories.name}
                 </Chip>
               </CardHeader>
+              <CardBody>
+                <h1 className="w-full font-semibold text-4xl">
+                  {postAttributes.title}
+                </h1>
+              </CardBody>
+              <CardFooter>
+                <Avatar src=""/>
+              </CardFooter>
             </Card>
           </article>
         </section>
