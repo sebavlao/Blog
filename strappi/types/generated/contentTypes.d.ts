@@ -865,8 +865,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'manyToMany',
       'api::post.post'
     >;
-    color: Attribute.String &
-      Attribute.CustomField<'plugin::color-picker.color'>;
+    color: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

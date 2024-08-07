@@ -1,4 +1,4 @@
-const {nextui} = require('@nextui-org/theme');
+const {nextui, colors} = require('@nextui-org/theme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -14,7 +14,16 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        category: {
+          politic: "#06B7DB"
+        }
+      },
     },
   },
+  safelist: [
+    'bg-category-politic',
+    'text-category-politic',
+  ],
   plugins: [nextui()],
 };
