@@ -17,7 +17,6 @@ export const getPosts = async () => {
   
   const fetchPosts = await fetch(`http://localhost:1337/api/posts?${qs.stringify(qsObj)}`)
   const posts = await fetchPosts.json()
-
   const postAttributes = posts.data[0].attributes
   const author = postAttributes.author.data.attributes
   const authorAvatar = author.avatar.data.attributes
