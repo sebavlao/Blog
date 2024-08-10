@@ -16,8 +16,9 @@ export const MainPost = ({ post, classBase, classContent, url }) => (
             <CardPost
                 post={post}
                 cardStyle="p-4 h-[280px] lg:h-72" 
-                descriptionStyle="w-full font-semibold text-2xl sm:text-3xl line-clamp-3 my-auto"
+                descriptionStyle="w-full font-bold text-2xl sm:text-3xl line-clamp-3 my-auto"
                 fontAuthorStyle="font-semibold"
+                footerFontSize="text-base gap-4"
                 classBase={classBase}
                 classContent={classContent}
                 url={url}

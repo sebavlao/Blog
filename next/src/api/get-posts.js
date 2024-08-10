@@ -14,6 +14,8 @@ export const getPosts = async () => {
         image: true
       }
     }
+
+    console.log(`http://localhost:1337/api/posts?${qs.stringify(qsObj)}`)
   
   const fetchPosts = await fetch(`http://localhost:1337/api/posts?${qs.stringify(qsObj)}`)
   const posts = await fetchPosts.json()
