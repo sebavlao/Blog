@@ -10,9 +10,11 @@ export const Header = () => {
 
     return (
         <Navbar isBlurred="true">
-            <NavbarBrand>
-            <EsViewLogo color={"#000000"}></EsViewLogo>
-            </NavbarBrand>
+                <NavbarBrand>
+                <Link href="/">
+                    <EsViewLogo color={"#000000"}></EsViewLogo>
+                </Link>
+                </NavbarBrand>
             <NavbarContent className="max-sm:hidden" justify="center">
             {menu.map((option, index) => (
                 <NavbarItem key={`${option}-${index}`}>

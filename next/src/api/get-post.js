@@ -5,7 +5,7 @@ export const getPost = async (slug) => {
       filters: {
         slug: slug
       },
-      fields: ["title", "created", "slug"],
+      fields: ["title", "created", "slug", "body"],
       populate: {
         author: {
           fields: ["name", "lastname"],
