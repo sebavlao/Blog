@@ -6,9 +6,20 @@ import { useRouter } from "next/navigation";
 export const PaginationComponent = ({ page, pageCount }) => {
     const router = useRouter()
 
+    const handlePagination = pageSelect => {
+        if (pageSelect == 1) return router.push("/");
+
+        router.push(`?page=${pageSelect}`)
+    }
+
     return (
         <section>
-            <Pagination onChange={handlePage => router.push(`?page=${handlePage}`)} isCompact showControls total={pageCount} initialPage={page}/>
+            <Pagination 
+                onChange={handlePagination} 
+                isCompact
+                showControls 
+                total={pageCount} 
+                initialPage={page}/>
         </section>
     )
 }
