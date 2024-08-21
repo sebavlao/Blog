@@ -1,6 +1,6 @@
 import qs from "qs";
 
-export const getPosts = async () => {
+export const getPosts = async (page) => {
   const qsObj = {
       fields: ["title", "created", "slug"],
       populate: {
@@ -12,7 +12,9 @@ export const getPosts = async () => {
           populate: ["icon"]
         },
         image: true
-      }
+      },
+      "pagination[page]": page || 1,
+      "pagination[pageSize]": 2
     }
   
   const fetchPosts = await fetch(`http://localhost:1337/api/posts?${qs.stringify(qsObj)}`)

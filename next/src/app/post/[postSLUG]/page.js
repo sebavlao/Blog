@@ -1,7 +1,7 @@
 import { getPost } from "@/api/get-post"
 import { childType } from "@/helpers/body-parser"
 import { colors } from "@/helpers/colors"
-import { PostContent } from "@/app/containers/post-content"
+import { PostContent } from "@/app/components/containers/post-content"
 
 export default async function PostDetails({ params }) {
     const post = await getPost(params.postSLUG)
