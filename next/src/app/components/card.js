@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Avatar } from "@nextui-org/avatar";
 import { CategoryChip } from "@/app/components/category-chip.js";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";

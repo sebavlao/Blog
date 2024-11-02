@@ -1,3 +1,4 @@
+import * as React from "react"
 import { CategoryChip } from "@/app/components/category-chip"
 import { Avatar } from "@nextui-org/avatar"
 import { Image } from "@nextui-org/image"

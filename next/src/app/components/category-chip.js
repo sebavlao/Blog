@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Chip } from "@nextui-org/chip";
 import { Image } from "@nextui-org/image";
 

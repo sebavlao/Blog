@@ -1,3 +1,4 @@
+import * as React from "react"
 import { getPost } from "@/api/get-post"
 import { childType } from "@/helpers/body-parser"
 import { colors } from "@/helpers/colors"

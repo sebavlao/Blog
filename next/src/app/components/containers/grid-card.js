@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Image } from "@nextui-org/image";
 import { CardPost } from "@/app/components/card";
 import Link from "next/link";
@@ -23,7 +24,7 @@ export const GridCard = ({ posts, url, getPostFunction, classBase, classContent 
                         />
                         <CardPost key={index}
                             post={post}
-                            cardStyle="rounded-none shadow-none h-56" 
+                            cardStyle="rounded-none shadow-none h-56 border-w" 
                             descriptionStyle="w-full font-semibold text-lg sm:text-xl line-clamp-3 my-auto"
                             fontAuthorStyle="font-semibold"
                             footerFontSize="text-sm gap-2"

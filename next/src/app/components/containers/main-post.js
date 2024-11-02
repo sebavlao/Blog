@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Image } from "@nextui-org/image";
 import { CardPost } from "@/app/components/card.js";
 import Link from "next/link";

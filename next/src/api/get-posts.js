@@ -14,7 +14,7 @@ export const getPosts = async (page) => {
         image: true
       },
       "pagination[page]": page || 1,
-      "pagination[pageSize]": 2
+      "pagination[pageSize]": 10
     }
   
   const fetchPosts = await fetch(`http://localhost:1337/api/posts?${qs.stringify(qsObj)}`)

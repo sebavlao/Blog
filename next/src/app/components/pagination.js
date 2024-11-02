@@ -1,5 +1,6 @@
 'use client'
 
+import * as React from "react"
 import { Pagination } from "@nextui-org/pagination";
 import { useRouter } from "next/navigation";
 
@@ -14,7 +15,7 @@ export const PaginationComponent = ({ page, pageCount }) => {
 
     return (
         <section>
-            <Pagination 
+            <Pagination
                 onChange={handlePagination} 
                 isCompact
                 showControls 
