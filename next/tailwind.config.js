@@ -25,5 +25,13 @@ module.exports = {
     'bg-category-politic',
     'text-category-politic',
   ],
-  plugins: [nextui()],
+  plugins: [nextui({
+    themes: {
+      dark: {
+        colors: {
+          "secondary": "#ffffff"
+        }
+      }
+    }
+  })],
 };

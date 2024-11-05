@@ -19,7 +19,7 @@ export const Header = () => {
         <Navbar isBlurred="true">
                 <NavbarBrand className="">
                 <Link href="/">
-                    <EsViewLogo className={"w-2/3"} fill={theme === "dark" ? "#ffffff" : "#000000"}></EsViewLogo>
+                    <EsViewLogo className={"w-1/2"} fill={theme === "dark" ? "#e63946" : "#000000"}></EsViewLogo>
                 </Link>
                 </NavbarBrand>
             <NavbarContent className="max-sm:hidden" justify="center">
@@ -27,11 +27,18 @@ export const Header = () => {
                 <NavbarItem key={`${option}-${index}`}>
                     <Link href="#">{option}</Link>
                 </NavbarItem>
-            ))}
+            ))}l
             </NavbarContent>
             <NavbarContent justify="end">
             <NavbarItem>
-                <Switch startContent={<MoonIcon />} endContent={<SunIcon />} isSelected={theme === "dark" ? true : false} onValueChange={handleTheme}></Switch>
+                <Switch 
+                    classNames={{wrapper: "bg-black", thumb: theme === "dark" ? "bg-[#e63946]" : "bg-white"}}
+                    startContent={<MoonIcon fill="#000000" />}
+                    color="secondary"
+                    endContent={<SunIcon fill="#ffffff"/>} 
+                    isSelected={theme === "dark" ? true : false} 
+                    onValueChange={handleTheme}>
+                </Switch>
             </NavbarItem>
             <NavbarMenuToggle className="sm:hidden"></NavbarMenuToggle>
             </NavbarContent>
