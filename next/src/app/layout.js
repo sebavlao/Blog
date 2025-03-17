@@ -1,9 +1,9 @@
-import * as React from "react"
+import * as React from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/header.js";
 import { Footer } from "./components/footer";
-import { ThemeProvider, useTheme } from "next-themes";
+import { ThemeProvider } from "next-themes";
 import { ThemeBody } from "./components/body-theme";
 
 export const metadata = {
@@ -19,10 +19,10 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ThemeBody>
-            <Header/>
+            <Header />
             {children}
-            <Footer/>
-          </ThemeBody>    
+            <Footer />
+          </ThemeBody>
         </ThemeProvider>
       </body>
     </html>

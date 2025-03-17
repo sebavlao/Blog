@@ -1,11 +1,11 @@
-const {nextui, colors} = require('@nextui-org/theme');
+const { nextui, colors } = require("@nextui-org/theme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(avatar|button|card|chip|image|input|navbar|pagination|toggle|user|ripple|spinner).js"
+    "./node_modules/@nextui-org/theme/dist/components/(avatar|button|card|chip|image|input|navbar|pagination|toggle|user|ripple|spinner).js",
   ],
   theme: {
     extend: {
@@ -16,22 +16,30 @@ module.exports = {
       },
       colors: {
         category: {
-          politic: "#06B7DB"
-        }
+          politic: "#06B7DB",
+          games: "#F00567",
+          series: "#FFEE38",
+        },
       },
     },
   },
   safelist: [
-    'bg-category-politic',
-    'text-category-politic',
+    "bg-category-politic",
+    "text-category-politic",
+    "bg-category-games",
+    "text-category-games",
+    "bg-category-series",
+    "text-category-series",
   ],
-  plugins: [nextui({
-    themes: {
-      dark: {
-        colors: {
-          "secondary": "#ffffff"
-        }
-      }
-    }
-  })],
+  plugins: [
+    nextui({
+      themes: {
+        dark: {
+          colors: {
+            secondary: "#ffffff",
+          },
+        },
+      },
+    }),
+  ],
 };
