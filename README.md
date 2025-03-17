@@ -7,13 +7,16 @@ Blog desarrollado como un proyecto propio para demostrar habilidades en el desar
 - Creación de **categorías**, **autores** y **posts**.  
 - Obtención de posts desde el backend.  
 - Arquitectura **separada en frontend y backend**.  
-- Uso de tecnologías modernas para un desarrollo eficiente y escalable.  
+- Uso de tecnologías modernas para un desarrollo eficiente y escalable.
+- Diseño responsivo.
+- Modo oscuro
 
 ## 🛠 Tecnologías utilizadas
 
 ### **Frontend**
-- [Next.js](https://nextjs.org/)  
-- [Tailwind CSS](https://tailwindcss.com/)  
+- [Next.js](https://nextjs.org/)
+- [HeroUi](https://www.heroui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ### **Backend**
 - [Strapi](https://strapi.io/)  
@@ -54,8 +57,12 @@ Blog desarrollado como un proyecto propio para demostrar habilidades en el desar
   cd ../strapi && npm instal
 ```
 
-## 📷 Capturas de pantalla
----
-
 ## 🚧 Estado del proyecto
 Actualmente el proyecto está finalizado, pero aún no está en producción ya que falta realizar el build final.
+
+## 📷 Capturas de pantalla
+![Main formato mobile](https://github.com/user-attachments/assets/d7936ca1-1a90-4530-95d2-a13236aea2a3)
+![Main formato web](https://github.com/user-attachments/assets/8e536a50-f917-4648-87ce-fcff674229cc)
+![Post formato web 1](https://github.com/user-attachments/assets/79b2150f-4890-4a62-a1b3-ee9f252a96f1)
+![Post formato web 2](https://github.com/user-attachments/assets/4eec3b6c-dbfc-4e3e-b4e2-f16a1cf3b8f3)
+![Crear entrada Backend 1](https://github.com/user-attachments/assets/ea36fa8e-04bf-48d7-9ef6-b1a0d31aca4a)
